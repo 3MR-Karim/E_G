@@ -1,0 +1,926 @@
+*{
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+}
+
+:root{
+ --varColor: rgba(255, 255, 255, 1);
+ --altColor:black;
+}
+
+body {
+ font-family: 'Rubik', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+ font-weight: 700; 
+
+}
+p {
+font-weight: 400;
+
+}
+
+
+li a
+{text-decoration: none;
+text-transform: capitalize;
+
+}
+ul {
+ list-style-type: none;
+}
+
+
+/* */
+header {
+ width: 100%;
+ height: 70px;
+
+}
+
+
+header img {
+ width: 50px;
+ position: relative;
+ height: 50px;
+ z-index: 50;
+}
+
+
+
+
+header nav {
+ display: flex;
+ flex-direction: column;
+ width: 100%  ;
+ height: 20vh ;
+
+}
+header nav ul{
+ display: flex;
+ justify-content: space-between;
+}
+/*  */
+header nav ul:first-child{
+ display: none;
+}
+
+.btns{
+display: none;
+
+}
+  
+
+
+.links {
+ display: flex;
+ position: relative;
+ z-index: 500;
+ height: 50px;
+ padding:10px;
+ 
+ height: 100px;
+ width: 100%;
+ justify-content: space-between;
+ align-items: center;
+}
+/*  */
+.TM img{
+  width:  50% !important;
+  height: 50% !important;
+}
+.links li {
+ display: none;
+ margin-top: 10px;
+}
+
+.links li:first-child,
+.links li:last-child {
+ display: flex;
+}
+
+.itemmmm .icons li,
+.itemmmm .navs li {
+ display: flex;
+}
+
+
+.icons  a:hover i {
+  cursor: pointer;
+ transition: 500ms;
+  color: red !important;
+}
+
+.links li:not(li:first-child) {
+padding-right: 30px;
+}
+
+.links li a{
+  font-size: 14px;
+  color: var(--varColor);
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: center;
+  }
+ 
+/* ______________________________________________________-- */
+.itemmmm{
+ position: absolute;
+ right: 0;
+margin-right: -10px;
+ overflow: hidden;
+ display: flex;
+ flex-direction: column;
+ z-index: 500000;
+ top: 0;
+ display: none;
+ width: 80%;
+ background-color: var(--varColor);
+ transition: 500ms;
+ height: 100vh;
+}
+.itemmmm li img{
+ width: 70%;
+ color: green;
+}
+
+.innerItemmm {
+ width: 90%;
+ height: 80%;
+ padding: 10px;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+}
+.icons{
+ display: flex ;
+align-items: center;
+margin: auto;
+justify-content: space-between;
+ width: 90%;
+}
+.icons a{
+  display: block;
+  position: relative;
+}
+
+
+
+.isoo{
+display: flex ;
+padding: 10px 0;
+justify-content: space-between !important;
+align-items: center;
+}
+.isoo img{
+  width: 100%;
+  height: 100%;
+}
+.isoo li {
+  color: red;
+}
+.close{
+  border: none;background-color: transparent;color: black;
+font-size: 20px;
+cursor: pointer;
+}
+.fa-bars{
+  cursor: pointer;
+}
+
+.icons a {
+
+  width: fit-content;
+  padding-left: 20px;
+}
+.icons a i{
+  display: block;
+color: black;
+ font-size: 1.5rem;
+}
+
+.navs li{
+margin-bottom: 10px;
+display: block;
+padding: 10px;
+
+}
+.navs li a {
+  position: relative;
+}
+
+.navs li:first-child a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 70%; 
+ 
+  height: 5px;
+  background-color: black;
+  transform: translateY(10px);
+}
+
+.navs li:not(:first-child) a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 5px;
+  background-color: black;
+  transform: translateY(10px);
+  transition: width 500ms;
+}
+
+.navs li:not(:first-child):hover a::after {
+  width: 70%; 
+  transform: translateY(10);
+}
+
+.navs li a {
+  display: block;
+
+  color: black;
+  text-wrap: nowrap;
+  
+}
+
+
+/* ____________________________________________  */
+.Page {
+  margin-top: -70px;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.Page .ItemBody {
+position: relative;  
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden; 
+}
+
+.Page .ItemBody div {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Page .ItemBody div div {
+  position: absolute;
+  z-index: 1000;
+  width: 90%;
+  height: 30%;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: start;
+
+}
+
+
+
+
+
+.navs{
+display: flex ;
+flex-direction: column;
+align-items: start;
+}
+
+
+
+.Page .ItemBody div div p {
+  font-family: Rubik, sans-serif;
+  font-size: 1.3rem;
+  color: var(--varColor);
+  line-height: 34px;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.Page .ItemBody div div h3 {
+  font-size: 10vmin;
+  color: var(--varColor);
+  text-transform: capitalize;
+}
+.Lists{
+  border: none;
+  background-color: transparent;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  position: absolute;
+  
+  z-index: 100;
+  left: 45%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the indicators */
+  width: auto; 
+  bottom: 2%;
+}
+
+
+.Page .carousel-indicators > li {
+  background-color: rgba(255, 255, 255, 1);
+  width: 30.21px;height: 5px;
+  cursor: pointer;
+  transition: 500ms;
+  top: 835px;left: 515px;gap: 0px;border-radius: 20px 0px 0px 0px;opacity: 0px;angle: -0 deg;
+margin-left: 20px;
+}
+ 
+.Page .carousel-indicators > li.active {
+ 
+  background-color: black;
+
+}
+
+/* ____________________________________________-*/
+
+
+#sectionTwo{
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+  background-color:  rgba(42, 48, 59, 1);;
+}
+ .container{
+  margin: 0 10px;
+}
+
+
+.commonHeading{
+  color: var(--varColor);
+  font-size:1.5rem;
+  font-weight: 700;
+   padding: 10px 0px; 
+  text-align: left !important;
+}
+/* __________--- */
+#sectionTwo .container .innerSectionTwo .itemSection {
+  width: 100%;
+  height: 50vh;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: hidden; /* Ensure the image doesn't move outside the parent */
+}
+
+#sectionTwo .container .innerSectionTwo .itemSection img {
+  object-fit: cover;
+  width:  100%; 
+  height: 100%;
+transform: scale(1) translateX(-5px);
+ 
+}
+/* ________ ______________________________*/
+
+#sectionTwo .container .itemSectionTwo {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Ensure only three items are visible */
+}
+/* ______________________________________________- */
+
+#sectionTwo .container .itemSectionTwo div:first-child {
+  display: flex;
+  
+  align-items: center;
+  margin: 15px 0;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling behavior */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+#sectionTwo .container .itemSectionTwo div:first-child::-webkit-scrollbar {
+  display: none; 
+}
+
+#sectionTwo .container .itemSectionTwo div:first-child div {
+  background-color: rgba(55, 63, 77, 1);
+  margin-left: 10px;
+  width: 28.3%; /* Adjust the width as needed */
+  height: 70px;
+  border-radius: 10px;
+  flex-shrink: 0; /* Prevent items from shrinking */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+#sectionTwo .container .itemSectionTwo div:first-child div span:first-child {
+  font-size: 1rem;
+  white-space: wrap;
+  text-wrap: wrap;
+  word-break: break-all;
+  color: var(--varColor);
+
+}
+
+#sectionTwo .container .itemSectionTwo div:first-child div span:last-child {
+  font-size: 0.8rem;
+ text-align: center;
+  color: var(--varColor);
+}
+
+/* ______________________________________________*/
+
+
+#sectionTwo .bodySection{
+  margin: 10px 0;
+}
+#sectionTwo .bodySection  ul {
+  padding-left: 20px; 
+}
+
+#sectionTwo .bodySection p {
+  color: rgba(255, 255, 255, 1);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+  line-height: 25px;
+  width: 100%;
+  height: auto;
+}
+
+
+
+#sectionTwo .container .itemSectionTwo ul li {
+  list-style-type: circle;
+  color: rgba(255, 255, 255, 1);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 34px;
+}
+/* ______________________________________________*/
+
+.buttonCommon {
+width: 100%;
+height: auto;
+display: flex;
+justify-content: center;
+}
+.buttonCommon button{
+  background-color: rgba(61, 112, 136, 1);
+  border: none;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 48px;
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonCommon button span:first-child{
+  color: var(--varColor);
+  text-transform: capitalize;
+  font-family: Rubik;font-size: 18px;font-weight: 600;line-height: 21.33px;text-align: center;
+}
+
+
+.buttonCommon .iconic{
+  background-color: aliceblue;  
+  border-radius: 50%;
+  display: flex;
+  right: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width:  38px;
+  height: 38px;
+}
+.buttonCommon .iconic i{
+
+  color:rgba(61, 112, 136, 1) ;
+transform: rotate(220deg);
+font-size: 25px;
+
+}
+/* ____________________________________________ */
+/* ____________________________________________ */
+/* ____________________________________________ */
+/* ____________________________________________ */
+/* ____________________________________________ */
+/* ____________________________________________ */
+/* ____________________________________________ */
+.nas{
+  padding-top: 5px;
+}
+
+/* ___________________Economic agenda d33s */
+
+
+#economicAgenda{
+background-size: cover;
+height: auto;
+overflow: hidden;
+height: 100vh !important;
+mix-blend-mode: luminosity;
+position: relative;
+height: auto;
+}
+
+#economicAgenda .quote-card{
+  background-color: #ffffff;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  position: relative;z-index: 50;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height:70vh ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+#economicAgenda .quote-card::after{ 
+position: absolute;
+content: ",,";
+top:  0% ;
+left: 0% ;  
+transform: translate(20px, -100px);
+font-size: 50vmin;
+color: rgba(61, 112, 136, 1);
+}
+#economicAgenda .quote-card::before{
+position: absolute;
+content: ",,";
+bottom: 0%;
+font-size: 50vmin;
+right:  0%;
+transform: translate(-20px, -0px);
+
+color: rgba(61, 112, 136, 1);
+
+}
+
+
+#economicAgenda .quote-card >div{
+  width: 100% ;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+}
+#economicAgenda h3{
+white-space: wrap;
+text-wrap: wrap;
+color: var(--altColor);
+margin: 30px 0;
+position: relative;
+z-index: 500;
+}
+.quote-text{
+ text-align: start;
+ 
+ 
+  white-space: wrap;
+  text-wrap: wrap;
+height: 100%;
+
+
+  color: rgba(0, 0, 0, 1);
+  font-family: Dubai;
+  font-size: 1rem;
+  
+  line-height: 30px;
+  text-align: left;
+
+}
+.quote-author{
+  margin: 20px 0;
+  line-height: 20px;
+  text-align: start;
+  color: rgba(61, 112, 136, 1);
+}
+
+/* ____________________________________________________ */
+/* ____________________________________________________ */
+/* ____________________________________________________ */
+/* ____________________________________________________ */
+/* ____________________________________________________ */
+/* ____________________________________________________ */
+/* ____________________________________________________ */
+#imgFreeZone {
+  overflow: hidden;
+  background-color: var(--varColor);
+}
+
+
+#imgFreeZone h3 {
+  color: rgba(39, 50, 66, 1);
+  font-family: Rubik;
+  font-size: 2rem;
+  margin-block:  20px;
+  margin:20px  auto;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.ContianerPhoto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.ContianerPhoto   div{
+width:  70%;
+height: 30%;
+margin:  30px 0;  
+}
+.ContianerPhoto   div img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+
+}
+/* _______________________________________________________________________ */
+
+
+
+/* _______________________________ */
+.Photos {
+  background-color: var(--varColor);
+  padding: 20px 0;
+  overflow: hidden;
+  margin-top: 30px !;
+ }
+ 
+ .containPhotos {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px 50px; /* تعديل الفجوات بين الصفوف والأعمدة */
+  justify-items: center;
+  align-items: center;
+ 
+ 
+ 
+ }
+ .Photos h3 {
+  
+ opacity: 0px;
+ font-family: Rubik;
+ font-size: 1.5rem;
+ text-wrap: nowrap;
+ font-weight: 600;
+ line-height: 54px;
+ color: rgba(39, 50, 66, 1);
+ margin-bottom: 50px;
+ text-transform: capitalize;
+text-align: start ;  
+}
+ .containPhotos div img {
+  transition: transform 500ms;
+ }
+ .containPhotos div img:hover{
+ transform:translateY(10px) scale(1.1);
+ 
+ }
+
+ 
+ .containPhotos > div {
+  display: contents; 
+ 
+ }
+ 
+ img {
+  display: block;
+  max-width: 90%;
+  height: auto;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* -_____________________________________________________________ */
+
+ 
+ footer {
+  background-color: #e7f0f5;
+  overflow: hidden;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px 0;
+}
+
+.footer-section h4 {
+width: 52px;
+height: 21px;
+opacity: 0px;
+font-family: Rubik;
+font-size: 18px;
+font-weight: 700;
+line-height: 21.33px;
+text-align: left;
+color: #323E48;
+text-wrap: nowrap;
+}
+#economicAgenda::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: inherit; 
+  background-blend-mode: luminosity;
+  filter: grayscale(100%);
+  opacity: 8;
+  z-index: 5;
+}
+
+
+.contact{
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+}
+.contact div{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 40%;
+  margin-top: 10px;
+
+}
+
+
+
+
+
+.footer-section ul {
+  list-style: none;
+ 
+  padding:  30px 0; 
+  
+}
+
+.footer-section ul li {
+  padding-bottom: 15px;
+}
+
+.footer-section ul li a {
+  color: #323E48;
+  font-family: Rubik;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.22px;
+  text-align: left;
+  
+}
+.social ul li {
+  width:  30px;
+  border: 1px solid  rgba(61, 112, 136, 1);;
+  position: relative;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center ;
+  align-items: center      ;
+transition: 500ms;
+}
+.social ul {
+  display: flex;
+  flex-direction: row;
+
+}
+.social ul li{
+  margin-left: 1px;
+}
+.social ul li i{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  color: #3D7088;
+}
+
+.social ul li:hover{
+  cursor: pointer;
+transform: translateY(-10px);
+
+} 
+
+/* -__________________________________________-- */
+.contact p {
+  display: flex;
+  align-items: start;
+}
+.contact p:first-child{
+  margin-bottom: 20px;
+} 
+.contact p span{
+  display: block;
+
+}
+.contact p a{text-decoration: none;
+color: black;
+}
+.contact  i{
+  color: rgba(61, 112, 136, 1);
+  margin-right: 10px;
+}
+
+
+
+
+
+/* -__________________________________________-- */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-top: 1px solid #ccc;
+  padding: 10px;
+}
+.footer-bottom p{font-size: 0.7rem;
+white-space: nowrap;
+
+text-wrap: nowrap;
+}
+.footer-bottom a{
+  font-size: 0.7rem;
+  text-decoration: none;
+  margin-top: 5px;
+  color: black;
+}
+
+.footer-bottom{
+  display: flex;
+  flex-direction:column ;
+  justify-content: start;
+  align-items: start;
+  align-content: start;
+}
